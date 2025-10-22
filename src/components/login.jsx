@@ -1,5 +1,6 @@
 import React from 'react'
 import './login.css'
+import googlelogo from '../assets/google-icon.svg'
 
 const Login = () => {
   return (
@@ -17,10 +18,11 @@ const Login = () => {
       <br/>
 
       <div className='form-options'>
-        <label>
-        <input type='checkbox' id='remember' name='remember'/>Remember Me
-      </label>
-      <a href='#'>Forget Password?</a>
+      <div className='remember'>
+        <input type='checkbox' id='remember' />
+        <label htmlFor='remember'>Remeber Me</label>
+      </div>
+      <a href='#' className='forgot-link'>Forget Password?</a>
       </div>
 
       <br/>
@@ -29,10 +31,10 @@ const Login = () => {
       <div className='divider'>Or login With</div>
       <br/>
       <button className='google-btn'>
-      <img src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg' alt='google logo'/>
+      <img src={googlelogo} alt='google logo'/>
       Continue with google</button>
 
-      <p className='signup-text'>Don't have an account?<a href='#'>Sign Up</a></p>
+      <p className='signup-text'>Don't have an account? <a href='#'>Sign Up</a></p>
       </form>
     </div>
   )
